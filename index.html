@@ -185,10 +185,7 @@
     
     window.onload=function () {
         //页面加载完执行的函数
-        for(var i=0;i<oImg.length;i++){
-            oImg[i].style.transform="rotateY("+i*deg+"deg) translateZ(140px)";
-            oImg[i].style.transition="2s "+(oImg.length-i)*0.1+"s";
-        }
+        
         
         var audio = document.getElementById("audio");
 	    document.addEventListener('DOMContentLoaded', function() {
@@ -360,6 +357,10 @@
                         // S.Shape.switchShape(S.ShapeBuilder.circle(value));
                         setTimeout(()=>{
                             document.getElementsByClassName('img_box')[0].style.display='flex';
+				for(var i=0;i<oImg.length;i++){
+				    oImg[i].style.transform="rotateY("+i*deg+"deg) translateZ(140px)";
+				    oImg[i].style.transition="2s "+(oImg.length-i)*0.1+"s";
+				}
                         },4000)
                         
                         // console.log('=====');

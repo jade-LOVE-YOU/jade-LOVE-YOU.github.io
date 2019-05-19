@@ -211,7 +211,7 @@
             S.Drawing.init('.canvas');
             document.body.classList.add('body--ready');
 			//想说的话
-            S.UI.simulate("520|韩|小|仙|女|#countdown 5|#circle|");
+            S.UI.simulate("520|韩|小|仙|女|#countdown 3|#circle|");
             S.Drawing.loop(function () {
                 S.Shape.render();
             });
@@ -362,7 +362,7 @@
 					    oImg[i].style.transform="rotateY("+i*deg+"deg) translateZ(140px)";
 					    oImg[i].style.transition="2s "+(oImg.length-i)*0.1+"s";
 					}
-				    },1000)
+				    },500)
                         },4000)
                         
                         // console.log('=====');

@@ -182,16 +182,7 @@
     var oImg=document.getElementsByClassName("img");//获取元素集合
     var deg =360/oImg.length;//每两张图片间的角度
     //遍历
-    var audio = document.getElementById("audio");
-    document.addEventListener('DOMContentLoaded', function() {
-        audio.play()
-    })
-    document.addEventListener('WeixinJSBridgeReady', function() {
-        audio.play()
-    })
-    document.addEventListener('touchstart', function() {
-        audio.play()
-    })
+    
     window.onload=function () {
         //页面加载完执行的函数
         for(var i=0;i<oImg.length;i++){
@@ -199,13 +190,22 @@
             oImg[i].style.transition="2s "+(oImg.length-i)*0.1+"s";
         }
         
-        console.log('===',audio)
-        // audio.addEventListener("DOMContentLoaded", function() {
-        //     audio.play();//开始播放
-        //     document.addEventListener("WeixinJSBridgeReady", function () {
-        //         audio.play();
-        //     }, false);
-        // }, false);
+        var audio = document.getElementById("audio");
+	    document.addEventListener('DOMContentLoaded', function() {
+		audio.play()
+	    })
+	    document.addEventListener('WeixinJSBridgeReady', function() {
+		audio.play()
+	    })
+	    document.addEventListener('touchstart', function() {
+		audio.play()
+	    })
+        audio.addEventListener("DOMContentLoaded", function() {
+            audio.play();//开始播放
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                audio.play();
+            }, false);
+        }, false);
     }
     /*鼠标移动  使相册旋转*/
     
